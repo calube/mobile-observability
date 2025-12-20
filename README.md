@@ -40,7 +40,7 @@ Claude analyzes your project and generates a prioritized instrumentation plan.
 ### 2. Audit Existing Telemetry
 
 ```
-/audit ./features/onboarding
+/audit features/onboarding
 ```
 
 Find gaps in a specific module's instrumentation.
@@ -48,7 +48,7 @@ Find gaps in a specific module's instrumentation.
 ### 3. Review Before Merging
 
 ```
-Launch the instrumentation-reviewer agent on ./features/checkout/
+Launch the instrumentation-reviewer agent on features/checkout
 ```
 
 Check for anti-patterns, missing context, and naming issues before code ships.
