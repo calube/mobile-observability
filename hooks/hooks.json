@@ -8,7 +8,7 @@
       "hooks": [
         {
           "type": "prompt",
-          "prompt": "When adding observability instrumentation to Swift files, watch for:\n\n1. **PII in breadcrumbs/logs** - Never log email, phone, passwords, or user-provided text in telemetry\n2. **Main thread blocking** - Use async dispatch for analytics calls, never block UI\n3. **Offline handling** - Queue telemetry events when network unavailable\n\nFlag these issues for the user if detected."
+          "prompt": "When adding telemetry instrumentation to Swift, watch for these observability anti-patterns:\n\n1. **High cardinality tags** - Never use user IDs, timestamps, or UUIDs as metric tag values (explodes cost)\n2. **Unbounded payloads** - Keep event extras under 1KB; don't attach entire models or state objects\n3. **Unstructured logging** - Use structured key-value pairs, not string interpolation\n4. **Inconsistent naming** - Follow conventions: `screen.load.HomeScreen` not `homeScreenLoaded`\n5. **PII in telemetry** - Never log email, phone, passwords, or user-provided free text\n6. **Missing context** - Always include screen name, session ID, and app version with events\n\nFlag these issues for the user if detected."
         }
       ]
     },
@@ -20,7 +20,7 @@
       "hooks": [
         {
           "type": "prompt",
-          "prompt": "When adding observability instrumentation to Kotlin files, watch for:\n\n1. **PII in breadcrumbs/logs** - Never log email, phone, passwords, or user-provided text in telemetry\n2. **Main thread blocking** - Use Dispatchers.IO or background scope for analytics calls\n3. **Offline handling** - Queue telemetry events when network unavailable\n\nFlag these issues for the user if detected."
+          "prompt": "When adding telemetry instrumentation to Kotlin, watch for these observability anti-patterns:\n\n1. **High cardinality tags** - Never use user IDs, timestamps, or UUIDs as metric tag values (explodes cost)\n2. **Unbounded payloads** - Keep event extras under 1KB; don't attach entire models or state objects\n3. **Unstructured logging** - Use structured key-value pairs, not string interpolation\n4. **Inconsistent naming** - Follow conventions: `screen.load.HomeScreen` not `homeScreenLoaded`\n5. **PII in telemetry** - Never log email, phone, passwords, or user-provided free text\n6. **Missing context** - Always include screen name, session ID, and app version with events\n\nFlag these issues for the user if detected."
         }
       ]
     },
@@ -32,7 +32,7 @@
       "hooks": [
         {
           "type": "prompt",
-          "prompt": "When adding observability instrumentation to React Native/TypeScript files, watch for:\n\n1. **PII in breadcrumbs/logs** - Never log email, phone, passwords, or user-provided text in telemetry\n2. **Native bridge serialization** - Ensure telemetry payloads are JSON-serializable before sending to native modules\n3. **Source maps** - Verify source maps are configured for crash symbolication\n\nFlag these issues for the user if detected."
+          "prompt": "When adding telemetry instrumentation to React Native/TypeScript, watch for these observability anti-patterns:\n\n1. **High cardinality tags** - Never use user IDs, timestamps, or UUIDs as metric tag values (explodes cost)\n2. **Unbounded payloads** - Keep event extras under 1KB; don't attach entire Redux state or large objects\n3. **Unstructured logging** - Use structured key-value pairs, not template literals for log messages\n4. **Inconsistent naming** - Follow conventions: `screen.load.HomeScreen` not `homeScreenLoaded`\n5. **PII in telemetry** - Never log email, phone, passwords, or user-provided free text\n6. **Missing context** - Always include screen name, session ID, and app version with events\n\nFlag these issues for the user if detected."
         }
       ]
     }

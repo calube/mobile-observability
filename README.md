@@ -138,17 +138,16 @@ Launch the codebase-analyzer agent to analyze my iOS app
 
 ## Anti-Pattern Hooks
 
-The plugin warns about observability-specific mistakes when editing mobile code:
+The plugin warns about observability anti-patterns when editing `.swift`, `.kt`, or `.ts` files:
 
-**Swift & Kotlin:**
-- PII in breadcrumbs/logs — Never log email, phone, or user-provided text
-- Main thread blocking — Never block UI thread for analytics calls
-- Offline handling — Queue telemetry events when offline
-
-**TypeScript/React Native:**
-- PII in breadcrumbs/logs — Never log email, phone, or user-provided text
-- Native bridge serialization — Ensure telemetry data is JSON-serializable
-- Source map uploads — Required for crash symbolication
+| Anti-Pattern | Why It Matters |
+|--------------|----------------|
+| **High cardinality tags** | User IDs or UUIDs as metric labels explode storage costs |
+| **Unbounded payloads** | Attaching entire state objects bloats events and hits limits |
+| **Unstructured logging** | String interpolation breaks log querying and aggregation |
+| **Inconsistent naming** | `fetchUser` vs `user.fetch` breaks dashboards and alerts |
+| **PII in telemetry** | Compliance risk; never log emails, phones, or free text |
+| **Missing context** | Events without screen/session/version are hard to debug |
 
 ## Reference Content
 
