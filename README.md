@@ -174,6 +174,7 @@ The plugin warns about observability anti-patterns when editing `.swift`, `.kt`,
 | Performance | App start, screen load, network, TTI |
 | UI | Navigation, scroll, animations |
 | Data | SQLite, Core Data, Room, Realm |
+| Business Logic | Decisions, rules, state machines, background jobs |
 | Sessions | Session replay, privacy masking |
 | Mobile | Offline-first, battery, fragmentation |
 

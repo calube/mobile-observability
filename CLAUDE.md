@@ -39,8 +39,10 @@ Claude Code plugin for mobile app observability. Provides commands, agents, skil
 
 | Topic | File |
 |-------|------|
+| Methodology | `references/user-focused-observability.md` |
 | What to measure | `references/jtbd.md` |
 | Instrumentation checklist | `references/instrumentation-patterns.md` |
+| Business logic | `references/business-logic.md` |
 | Crashes | `references/crash-reporting.md` |
 | Performance | `references/performance.md`, `references/ui-performance.md` |
 | Database | `references/data-persistence.md` |
