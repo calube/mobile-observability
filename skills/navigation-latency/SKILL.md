@@ -2,12 +2,12 @@
 name: navigation-latency
 description: Measure time from navigation tap to screen fully loaded and interactive. Use when tracking screen transitions, deep links, or tab switches.
 triggers:
-  - "screen load time"
-  - "track screen transitions"
-  - "measure TTI"
-  - "slow screen navigation"
   - "deep link performance"
+  - "measure TTI"
+  - "screen load time"
+  - "slow screen navigation"
   - "tab switch latency"
+  - "track screen transitions"
 priority: 2
 ---
 

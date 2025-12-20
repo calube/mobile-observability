@@ -2,12 +2,12 @@
 name: interaction-latency
 description: Measure time from user tap to action completion. Use when tracking button response times, form submissions, add-to-cart, or any tap-triggered operation.
 triggers:
-  - "button feels slow"
-  - "tap response time"
   - "add to cart is slow"
-  - "track button performance"
-  - "measure interaction latency"
+  - "button feels slow"
   - "form submission timing"
+  - "measure interaction latency"
+  - "tap response time"
+  - "track button performance"
 priority: 2
 ---
 

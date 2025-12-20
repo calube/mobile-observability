@@ -2,12 +2,12 @@
 name: symbolication-setup
 description: Configure crash symbolication for readable stack traces. Use when setting up dSYMs (iOS), ProGuard/R8 mappings (Android), or source maps (React Native).
 triggers:
-  - "set up symbolication"
   - "configure dSYMs"
+  - "crash symbols"
   - "ProGuard mappings"
   - "readable stack traces"
+  - "set up symbolication"
   - "source maps upload"
-  - "crash symbols"
 priority: 1
 ---
 

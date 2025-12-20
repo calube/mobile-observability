@@ -2,11 +2,11 @@
 name: instrumentation-planning
 description: Plan what to measure in mobile apps. Use when starting observability, prioritizing instrumentation, or asking "what should I track?"
 triggers:
+  - "planning telemetry"
+  - "prioritize instrumentation"
+  - "start observability"
   - "what should I track"
   - "what to measure"
-  - "start observability"
-  - "prioritize instrumentation"
-  - "planning telemetry"
   - "where to begin"
 priority: 1
 ---

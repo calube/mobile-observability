@@ -403,7 +403,6 @@ export function useEmbraceSpan(name: string, attributes?: Record<string, string>
   const spanRef = useRef<string | null>(null);
 
   useEffect(() => {
-    const startTime = Date.now();
     spanRef.current = startSpan(name, attributes);
 
     return () => {
