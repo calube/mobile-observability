@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Plugin-blueviolet)](https://claude.ai/code)
-[![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20Android%20%7C%20React%20Native-green)](https://github.com/calube/mobile-observability)
+[![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20Android%20%7C%20React%20Native%20%7C%20Flutter-green)](https://github.com/calube/mobile-observability)
 
 **Teach Claude how to instrument mobile apps correctly.**
 
@@ -23,6 +23,14 @@ This plugin teaches Claude **User-Focused Observability** — linking user inten
 ## Installation
 
 Requires [Claude Code](https://claude.ai/code).
+
+**From the marketplace (recommended):**
+
+```bash
+claude plugin add calube/mobile-observability
+```
+
+**From source:**
 
 ```bash
 git clone https://github.com/calube/mobile-observability.git
@@ -97,7 +105,7 @@ Skills activate automatically:
 
 ### Anti-Pattern Hooks
 
-Warnings when editing `.swift`, `.kt`, or `.ts` files:
+Warnings when editing `.swift`, `.kt`, `.ts`, or `.dart` files:
 
 - **High cardinality tags** — User IDs as metric labels explode costs
 - **Unbounded payloads** — Attaching entire state objects
@@ -106,7 +114,7 @@ Warnings when editing `.swift`, `.kt`, or `.ts` files:
 
 ### Reference Library
 
-20+ guides covering:
+25+ guides covering:
 
 **Methodology**
 - User-Focused Observability — intent, outcomes, friction signals
@@ -116,6 +124,7 @@ Warnings when editing `.swift`, `.kt`, or `.ts` files:
 - iOS (Swift/SwiftUI, MetricKit, os_signpost)
 - Android (Kotlin/Compose, Perfetto, ANR)
 - React Native (Expo, Hermes, source maps)
+- Flutter (Dart error handling, native bridges, widget lifecycle)
 
 **Topics**
 - Crash capture and breadcrumbs
@@ -125,7 +134,7 @@ Warnings when editing `.swift`, `.kt`, or `.ts` files:
 - Session replay and privacy
 
 **Vendors**
-- Sentry, Datadog, Embrace, Bugsnag, bitdrift setup guides
+- Sentry, Datadog, Embrace, Bugsnag, Bitdrift, Firebase, OpenTelemetry, Measure.sh
 
 **Templates**
 - Screen load tracking
@@ -146,8 +155,8 @@ mobile-observability/
 
 ## Who This Is For
 
-- Mobile developers adding observability to iOS, Android, or React Native
-- Teams setting up Sentry, Datadog, Embrace, Bugsnag, or bitdrift
+- Mobile developers adding observability to iOS, Android, React Native, or Flutter
+- Teams setting up Sentry, Datadog, Embrace, Bugsnag, Bitdrift, Firebase, or OpenTelemetry
 - Anyone who wants actionable telemetry, not just data
 
 ## Contributing
