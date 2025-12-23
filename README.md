@@ -27,7 +27,8 @@ Requires [Claude Code](https://claude.ai/code).
 **From the marketplace (recommended):**
 
 ```bash
-claude plugin add calube/mobile-observability
+claude plugin marketplace add calube/mobile-observability
+claude plugin install mobile-observability
 ```
 
 **From source:**
@@ -35,7 +36,7 @@ claude plugin add calube/mobile-observability
 ```bash
 git clone https://github.com/calube/mobile-observability.git
 cd mobile-observability
-claude plugins install .
+claude plugin install .
 ```
 
 ## Workflows
