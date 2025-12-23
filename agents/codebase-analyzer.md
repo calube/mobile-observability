@@ -48,6 +48,13 @@ React Native Indicators:
 - metro.config.js
 - App.tsx or App.js
 - android/ and ios/ directories
+
+Flutter Indicators:
+- pubspec.yaml with "flutter"
+- *.dart files
+- lib/main.dart
+- android/ and ios/ directories
+- .dart_tool/
 ```
 
 ### Phase 2: Architecture Discovery
@@ -67,6 +74,10 @@ Android:
 React Native:
 - index.js → AppRegistry.registerComponent
 - App.tsx → root component
+
+Flutter:
+- lib/main.dart → main() → runApp()
+- lib/app.dart → MaterialApp/CupertinoApp
 ```
 
 **Architecture Patterns:**
@@ -87,6 +98,13 @@ React Native:
 - /store/, /redux/ → Redux
 - *Context.tsx → Context API
 - @react-navigation → React Navigation
+
+Flutter:
+- *_bloc.dart → BLoC pattern
+- *_cubit.dart → Cubit pattern
+- *_provider.dart → Provider pattern
+- *_controller.dart → GetX or custom
+- go_router, auto_route → Navigation
 ```
 
 **Network Layer:**
@@ -105,6 +123,11 @@ React Native:
 - fetch() calls
 - axios imports
 - *api.ts, *client.ts
+
+Flutter:
+- http, dio packages
+- *_client.dart, *_api.dart
+- retrofit annotations
 ```
 
 **Data Persistence:**
@@ -123,18 +146,25 @@ React Native:
 - AsyncStorage
 - @react-native-async-storage
 - realm, watermelondb
+
+Flutter:
+- sqflite, drift
+- hive, isar
+- shared_preferences
 ```
 
 ### Phase 3: Telemetry Detection
 
 Search for existing SDKs:
 
-| Vendor | iOS | Android | RN |
-|--------|-----|---------|-----|
-| Sentry | `import Sentry` | `io.sentry` | `@sentry/react-native` |
-| Datadog | `import Datadog` | `com.datadog` | `@datadog/mobile-react-native` |
-| Firebase | `import Firebase` | `com.google.firebase` | `@react-native-firebase` |
-| Embrace | `import Embrace` | `io.embrace` | `@embrace-io/react-native` |
+| Vendor | iOS | Android | RN | Flutter |
+|--------|-----|---------|-----|---------|
+| Sentry | `import Sentry` | `io.sentry` | `@sentry/react-native` | `sentry_flutter` |
+| Datadog | `import Datadog` | `com.datadog` | `@datadog/mobile-react-native` | `datadog_flutter` |
+| Firebase | `import Firebase` | `com.google.firebase` | `@react-native-firebase` | `firebase_crashlytics` |
+| Embrace | `import Embrace` | `io.embrace` | `@embrace-io/react-native` | `embrace` |
+| OpenTelemetry | `import OpenTelemetry` | `io.opentelemetry` | N/A | N/A |
+| Measure.sh | `import Measure` | `sh.measure` | N/A | `measure_flutter` |
 
 Search patterns:
 ```bash
@@ -226,6 +256,7 @@ When analyzing a codebase, use the **Read tool** to load references based on pla
 - iOS: Read `references/ios-native.md`
 - Android: Read `references/android-native.md`
 - React Native: Read `references/react-native-expo.md`
+- Flutter: Read `references/flutter.md`
 
 **If existing SDK found (Read vendor docs):**
 - `references/platforms/{vendor}.md` - for vendor-specific patterns
